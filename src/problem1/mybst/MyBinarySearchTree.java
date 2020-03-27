@@ -58,4 +58,24 @@ public class MyBinarySearchTree {
         }
     }
     public int getCount(){return count;}
+
+    public void preOrder(TreeNode root){
+        if(root == null){    return;}
+        else{
+            System.out.print(root.getData()+" ");
+            preOrder(root.getLeft());
+            preOrder(root.getRight());
+        }
+    }
+
+    public void postOrder(TreeNode root){
+        if(root == null) {   return;}
+        else{
+            postOrder(root.getLeft());
+            postOrder(root.getRight());
+            System.out.print(root.getData()+" ");
+        }
+    }
+
 }
+
